@@ -1,0 +1,161 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #333;
+    padding: 1rem 0;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden by default, shown in mobile view */
+}
+
+.navbar-toggle .icon {
+    width: 28px;
+    height: 28px;
+}
+
+.navbar-drawer {
+    display: flex; /* Default for desktop */
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 1.5rem;
+}
+
+.navbar-link,
+.navbar-button {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-button {
+    background-color: #e44d26; /* A distinct color for buttons */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.navbar-button.logout {
+    background-color: #dc3545; /* Red for logout */
+}
+
+.navbar-button.login {
+    background-color: #007bff; /* Blue for login */
+}
+
+.navbar-button:hover {
+    opacity: 0.9;
+}
+
+/* Mobile styles */
+@media (max-width: 749px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show toggle button in mobile */
+    }
+
+    .navbar-drawer {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Hidden off-screen by default */
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 4rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+
+    .navbar-drawer.open {
+        right: 0; /* Slide in when open */
+    }
+
+    .navbar-drawer.desktop {
+        /* This rule prevents mobile styles from applying when switching to desktop */
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+        padding-top: 0;
+        flex-direction: row;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .navbar-menu li {
+        margin: 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar-link,
+    .navbar-button {
+        display: block;
+        width: calc(100% - 2rem); /* Account for padding */
+        padding: 1rem;
+        border-radius: 0; /* Remove border-radius for full-width items */
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator */
+    }
+
+    .navbar-button {
+        margin-top: 0.5rem;
+    }
+
+    .navbar-menu li:last-child .navbar-link,
+    .navbar-menu li:last-child .navbar-button {
+        border-bottom: none;
+    }
+}

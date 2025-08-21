@@ -1,0 +1,85 @@
+.bill-history-container {
+    padding: 2rem;
+    background-color: #f9fafb;
+    font-family: Arial, sans-serif;
+}
+
+.bill-title {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.apply-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #2563eb;
+}
+
+.loading,
+.error-message,
+.no-data-message {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+    color: #ef4444;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bill-table thead {
+    background-color: #e5e7eb;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.bill-table th,
+.bill-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.bill-table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #047857;
+    text-align: right;
+}

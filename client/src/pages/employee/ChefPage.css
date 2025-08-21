@@ -1,0 +1,152 @@
+/* ChefPage.css */
+
+.chef-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 2rem;
+}
+
+.chef-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.chef-loading,
+.chef-error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: #9ca3af;
+}
+
+.chef-error {
+  color: #dc2626;
+}
+
+.no-orders {
+  text-align: center;
+  color: #6b7280;
+}
+
+.orders-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.order-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.order-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.order-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.items-section {
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.items-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #4b5563;
+  padding: 0.2rem 0;
+}
+
+.item-qty {
+  font-weight: 600;
+}
+
+.order-actions {
+  margin-top: 1rem;
+}
+
+.status {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.status-pending {
+  color: #dc2626;
+}
+
+.status-preparing {
+  color: #d97706;
+}
+
+.status-ready {
+  color: #16a34a;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn.yellow {
+  background-color: #f59e0b;
+}
+
+.btn.yellow:hover {
+  background-color: #d97706;
+}
+
+.btn.green {
+  background-color: #10b981;
+}
+
+.btn.green:hover {
+  background-color: #059669;
+}
