@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://tastytab-backend.onrender.com'; // Ensure this matches your backend
+const API_BASE_URL = import.meta.env.VITE; // Ensure this matches your backend
 
 const api = axios.create({
     baseURL: API_BASE_URL,
